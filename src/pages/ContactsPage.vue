@@ -1,6 +1,5 @@
 <template>
   <div>
-    
     <Header />
 
     <section class="banner">
@@ -91,7 +90,6 @@
     </section>
 
     <Footer />
-
   </div>
 </template>
 
@@ -135,7 +133,9 @@ export default {
 
 <style lang="scss">
 @import "src/assets/styles/main.scss";
-
+.wrapper {
+  background-color: $white;
+}
 .banner {
   &__img {
     position: relative;
@@ -151,13 +151,15 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    @include breakpoint(mobileonly) {
-      top: 26%;
+    @include breakpoint(laptop) {
+      top: 17%;
+    }
+    @include breakpoint(tablet) {
+      top: 20%;
     }
     &_title {
       h3 {
         @include font-size(44);
-        font-size: 4vw;
         padding-bottom: 1.25rem;
         text-align: center;
         @include breakpoint(mobileonly) {
